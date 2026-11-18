@@ -38,6 +38,8 @@ that holds `Mods`. Details: [missil-misterplace/docs/deployment.md](missil-miste
 
 ## Working together
 
+- After cloning, the mod folders are on a detached commit. Before changing one, run `git switch main` inside it
+  (or once for all: `git submodule foreach git switch main`).
 - Commit and push inside the mod you changed (each mod is its own repo).
 - To share a combination that works, commit the moved submodule pointer here: `git add <mod folder>` and commit.
 - Docs: [docs/status.md](docs/status.md) (state and open items), [docs/testing.md](docs/testing.md),
