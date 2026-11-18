@@ -1,0 +1,18 @@
+[submodule "missil-misterplace"]
+	path = missil-misterplace
+	url = ../missil-misterplace.git
+[submodule "missilSLBM-misterplace"]
+	path = missilSLBM-misterplace
+	url = ../missilSLBM-misterplace.git
+[submodule "LauncherX"]
+	path = LauncherX
+	url = ../LauncherX.git
+[submodule "IronDome/IronDomeClassic"]
+	path = IronDome/IronDomeClassic
+	url = ../IronDomeClassic.git
+[submodule "IronDome/IronDomeX"]
+	path = IronDome/IronDomeX
+	url = ../IronDomeX.git
+[submodule "IronDome/AntennaIronDome"]
+	path = IronDome/AntennaIronDome
+	url = ../AntennaIronDome.git
