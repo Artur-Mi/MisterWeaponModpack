@@ -7,6 +7,23 @@ without a Linux equivalent (see [deployment.md](missil-misterplace/docs/deployme
 - Commit and push inside the mod repo first; then `git add <mod folder>` and commit here to move the pinned version.
 - Clone: `git clone --recurse-submodules <url>`; update: `git pull --recurse-submodules`.
 
+## Collaborating (two people, two machines)
+- **Start of every session:** `git pull --recurse-submodules` here, then make sure each mod you will touch is on
+  `main`, not a detached commit (`git -C <mod> branch --show-current` prints nothing when detached; fix with
+  `git -C <mod> switch main` then `git -C <mod> pull`). Never commit on a detached HEAD: that work is easy to lose.
+- **End of a change:** commit and push in the mod, then bump the pointer here (`git add <mod>`, commit, push). Pull
+  before pushing; if a push is rejected, pull and rebase, never force-push.
+- `docs/status.md` is edited by both people: pull before editing it, keep edits small, and push soon after.
+- Only the Workshop owner (`steamIdOwner` in `deploy.json`) publishes and runs `deploy.ps1 final`. Collaborators use `dev`.
+- **First-time setup on a new machine** (once per person; also in [README.md](README.md#collaborator-setup)):
+  Git + Git LFS (`git lfs install`), clone as above, `deploy.ps1 dev` in each mod (brain first), and the `se-dev-*`
+  skills from `CometWorks/skills` (`npx skills add CometWorks/skills`, or clone it and run `install/claude.bat` /
+  `install/claude.sh`). They prepare themselves on first use (needs Space Engineers installed); set
+  `SE_DEV_GRAPHIFY=0` to skip Graphify, as on the owner's machine. If the skills are missing, say so to the user
+  instead of guessing Mod API members.
+- Claude's memory is per machine and not shared: anything both people's Claude must know goes in these `CLAUDE.md`
+  files or `docs/`, not only in memory.
+
 ## Docs (start with the status)
 - [docs/status.md](docs/status.md): **current state, what is tested, open items, gotchas. Read first when resuming**
 - [docs/modpack-plan.md](docs/modpack-plan.md): structure, Workshop IDs, modernization phases

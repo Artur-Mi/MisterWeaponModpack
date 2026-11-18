@@ -23,6 +23,22 @@ git clone --recurse-submodules https://github.com/Artur-Mi/MisterWeaponModpack.g
 
 Later updates: `git pull --recurse-submodules`.
 
+## Collaborator setup
+
+Once per machine:
+
+1. Install Git and Git LFS, run `git lfs install`, and clone as above.
+2. Put the mods on a branch: `git submodule foreach git switch main` (a fresh clone leaves them on a detached commit).
+3. Deploy each mod you want with `deploy.ps1 dev` (see below), the brain first.
+4. If you use Claude Code: install the Space Engineers dev skills from
+   [CometWorks/skills](https://github.com/CometWorks/skills) (`npx skills add CometWorks/skills`, or clone it and run
+   `install/claude.bat` on Windows / `install/claude.sh` on Linux). They prepare themselves on first use and need the
+   game installed. Optional: set `SE_DEV_GRAPHIFY=0` to skip the Graphify index. Claude reads the rules in `CLAUDE.md`;
+   its memory is per machine and not shared, so shared rules belong in `CLAUDE.md` or `docs/`.
+
+Every session: `git pull --recurse-submodules` first, and check the mod you will edit is on `main`
+(`git -C <mod> switch main`, then `git -C <mod> pull`).
+
 ## Load the mods in the game
 
 In each mod folder you want, run its deploy script once. It links the game's `Mods` folder to the repo, so edits are live:
