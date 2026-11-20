@@ -11,6 +11,7 @@ missil-misterplace (brain: guided-missile logic, scripts only)
  ├── LauncherX                (blocks + its own script for now)
  └── IronDomeX                (blocks + its own script for now)
 AntennaIronDome              (standalone antenna + radar script; no brain dependency)
+WaterImpact                  (standalone: missiles and shells hitting water; needs the Water Mod)
 ```
 
 On disk the three Iron Dome repos (`IronDomeClassic`, `IronDomeX`, `AntennaIronDome`) sit together in the
@@ -25,6 +26,7 @@ to the brain therefore use `../../missil-misterplace`.
 | LauncherX | ✅ `LauncherX/` | none yet | none yet (not published) |
 | IronDomeX | ✅ `IronDome/IronDomeX/` | none yet | none yet (not published) |
 | AntennaIronDome | ✅ `IronDome/AntennaIronDome/` | none yet | none yet (not published) |
+| WaterImpact | ✅ `WaterImpact/` (local only, no GitHub yet) | 3842706265 | none yet (not published) |
 
 The brain's old pre-git folder (`missil-misterplace-dev/`) was identical to the repo's `Mod/` and was moved to
 `%APPDATA%\SpaceEngineers\ModBackups\missil-misterplace-dev-source-20261117-224010`. Edit only in

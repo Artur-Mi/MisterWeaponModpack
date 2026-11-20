@@ -28,6 +28,7 @@ without a Linux equivalent (see [deployment.md](missil-misterplace/docs/deployme
 - [docs/status.md](docs/status.md): **current state, what is tested, open items, gotchas. Read first when resuming**
 - [docs/modpack-plan.md](docs/modpack-plan.md): structure, Workshop IDs, modernization phases
 - [docs/testing.md](docs/testing.md): which mods to load and how to test in the game
+- [docs/water-impact-plan.md](docs/water-impact-plan.md): plan for the `WaterImpact` mod (missiles and shells hitting water); phase 1 built
 
 ## Mods
 | Folder | What | Docs |
@@ -38,6 +39,7 @@ without a Linux equivalent (see [deployment.md](missil-misterplace/docs/deployme
 | `LauncherX/` | LauncherX block + visuals script (git repo) | [CLAUDE.md](LauncherX/CLAUDE.md) |
 | `IronDome/IronDomeX/` | IronDomeX block + visuals script (git repo) | [CLAUDE.md](IronDome/IronDomeX/CLAUDE.md) |
 | `IronDome/AntennaIronDome/` | Antenna block with rotating radar dish, standalone (git repo) | [CLAUDE.md](IronDome/AntennaIronDome/CLAUDE.md) |
+| `WaterImpact/` | Missiles and shells hitting water: detonate, shatter or (later) penetrate; standalone, needs the Water Mod (git repo) | [CLAUDE.md](WaterImpact/CLAUDE.md) |
 
 ## Conventions (apply to every mod repo)
 - Shipped content lives in `<repo>/Mod/`. Deploy with `deploy.ps1 dev|final`, configured by `deploy.json`.

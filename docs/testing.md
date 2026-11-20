@@ -43,6 +43,25 @@ Teal). Duplicate a world rather than editing the one you play.
 3. Both intercept an enemy missile as before (the scripts are in the brain).
 4. Load only the brain: the Iron Dome blocks are absent and nothing errors.
 
+## Checklist for WaterImpact
+
+Load `WaterImpact-dev` and the Water Mod on a water planet (the brain is optional; load `missil-misterplace-dev` too to
+test guided missiles). Fire at the sea from a ship or a platform above water.
+
+1. The world loads; the log has no `Exception` and no `WaterImpact` error.
+2. Rocket (`Missile`) at the sea: explodes on the surface with a water blast, does not continue under water.
+3. Rocket at a boat's hull just below the waterline from above: explodes at the surface; nearby blocks take blast damage.
+4. Railgun (small and large): the slug stops at the surface with a big splash.
+5. Artillery and assault cannon: a big splash, spray and a water column with a blast sound at entry, then a bubble trail going on under water in a straight line,
+   slowing down, gone after about 40 m (assault) or 56 m (artillery).
+5b. A partly submerged target block wall 5, 20 and 60 m under the surface along the shot's path: heavy damage at 5 m,
+   much less at 20 m, none at 60 m.
+6. Flare: vanishes on the water.
+7. SLBM or LauncherX fired from under water: unaffected while climbing out (needs the brain and their block mods).
+8. The log lists one `[WaterImpact] <subtype> hit water ...` line per ammo type.
+9. Multiplayer (second player or a local dedicated server): the client sees rockets stop and explode at the surface,
+   not a few metres under it, and railgun slugs vanish there.
+
 ## When something fails
 
 Read the newest `%APPDATA%\SpaceEngineers\SpaceEngineers_<date>_<time>.log` and search for `Exception`, the mod names
