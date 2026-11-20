@@ -12,12 +12,12 @@ Snapshot at the end of the first working session (2026-11-17). Read this first w
 | `LauncherX` | Clean | `LauncherX-dev` | Missile is aquatic/SLBM ammo, block is underwater-only, requires the brain. Not published (dev or final) |
 | `IronDomeX` | Clean | `IronDomeX-dev` | Block + ammo registered in the brain's Iron Dome logic (requires the brain); ammo stats equal `IDMissile`. Dev deployed, not tested in game |
 | `AntennaIronDome` | Clean (baseline commit) | `AntennaIronDome-dev` | Standalone antenna with a spinning radar dish; moved into a repo 2026-11-18 (content unchanged from the plain `Mods\AntennaIronDome` copy). Dev deployed; not tested in game; not published |
-| `WaterImpact` | Phase 1 committed locally; **no GitHub repo or submodule yet** | `WaterImpact-dev` | New 2026-11-19: missiles detonate on hitting water, railguns shatter, flares vanish (phase 1: loads, one rocket detonated per the log); artillery/assault shells travel on under water losing damage (phase 2: not tested); multiplayer packet Plan: [water-impact-plan.md](water-impact-plan.md) |
+| `WaterImpact` | On GitHub and pinned here as a submodule (2026-11-20) | `WaterImpact-dev` | New 2026-11-19: missiles detonate on hitting water, railguns shatter, flares vanish (phase 1: loads, one rocket detonated per the log); artillery/assault shells travel on under water losing damage (phase 2: not tested); multiplayer packet Plan: [water-impact-plan.md](water-impact-plan.md) |
 | `IronDomeClassic` | Clean (initial commit) | `IronDomeClassic-dev` | Iron Dome turret/launcher/ammo moved out of the brain (data only; brain scripts still drive them). Dev deployed; not tested in game; not published |
 
 The three Iron Dome repos (`IronDomeClassic`, `IronDomeX`, `AntennaIronDome`) moved into the `IronDome/` folder on 2026-11-18; their dev junctions were re-created and their `deploy.ps1` now finds sibling repos one level up and survives a broken junction.
 
-All six mod repos and the base repo are **public on GitHub** under `Artur-Mi` (2026-11-18); the base repo `MisterWeaponModpack` pins the mods as submodules (relative URLs). Nothing has been published or deployed as final since the repos were created.
+All seven mod repos and the base repo are **public on GitHub** under `Artur-Mi` (2026-11-18; WaterImpact 2026-11-20); the base repo `MisterWeaponModpack` pins the mods as submodules (relative URLs). Nothing has been published or deployed as final since the repos were created.
 
 `deploy.ps1` (same file in every repo) is machine- and OS-agnostic since 2026-11-18: SE data folder from `-SeDataDir`, `SE_DATA_DIR`, `%APPDATA%` or the Linux Proton prefix; symlink off Windows. Tested on Windows (including a fresh `Mods` folder); **not tested on Linux**.
 
@@ -54,7 +54,7 @@ enforcement works.
 
 ## Open items, in rough priority
 
-0. **WaterImpact** (new, 2026-11-19): create its GitHub repo, push, add it here as a submodule; test phase 1 at sea
+0. **WaterImpact** (new, 2026-11-19): test phase 1 at sea
    ([testing.md](testing.md#checklist-for-waterimpact)), single player then with a second player, including phase 2 (shell penetration);
    then phase 3 (config file). See [water-impact-plan.md](water-impact-plan.md).
 

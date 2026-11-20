@@ -16,3 +16,6 @@
 [submodule "IronDome/AntennaIronDome"]
 	path = IronDome/AntennaIronDome
 	url = ../AntennaIronDome.git
+[submodule "WaterImpact"]
+	path = WaterImpact
+	url = ../WaterImpact.git

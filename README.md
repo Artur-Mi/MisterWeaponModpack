@@ -1,6 +1,6 @@
 # MisterWeapon modpack
 
-Space Engineers 1 weapon mods: guided missiles (the "brain"), SLBM, LauncherX and the Iron Dome family.
+Space Engineers 1 weapon mods: guided missiles (the "brain"), SLBM, LauncherX, the Iron Dome family and WaterImpact.
 This repo holds the shared docs and pins each mod repo, as a git submodule, at a version known to work with the others.
 
 | Folder | What |
@@ -11,6 +11,7 @@ This repo holds the shared docs and pins each mod repo, as a git submodule, at a
 | `IronDome/IronDomeClassic/` | Original Iron Dome turret and launcher (needs the brain) |
 | `IronDome/IronDomeX/` | IronDomeX block (needs the brain) |
 | `IronDome/AntennaIronDome/` | Antenna with a rotating radar dish (standalone) |
+| `WaterImpact/` | Missiles and shells hitting water (standalone, needs the Water Mod) |
 
 ## Get it
 

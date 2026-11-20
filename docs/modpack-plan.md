@@ -2,7 +2,7 @@
 
 ## Structure
 
-Six Space Engineers 1 mods. Each is its own git repo, and each has a **dev** and a **final** Workshop version.
+Seven Space Engineers 1 mods. Each is its own git repo, and each has a **dev** and a **final** Workshop version.
 
 ```
 missil-misterplace (brain: guided-missile logic, scripts only)
@@ -26,7 +26,7 @@ to the brain therefore use `../../missil-misterplace`.
 | LauncherX | ✅ `LauncherX/` | none yet | none yet (not published) |
 | IronDomeX | ✅ `IronDome/IronDomeX/` | none yet | none yet (not published) |
 | AntennaIronDome | ✅ `IronDome/AntennaIronDome/` | none yet | none yet (not published) |
-| WaterImpact | ✅ `WaterImpact/` (local only, no GitHub yet) | 3842706265 | none yet (not published) |
+| WaterImpact | ✅ `WaterImpact/` | 3842706265 | none yet (not published) |
 
 The brain's old pre-git folder (`missil-misterplace-dev/`) was identical to the repo's `Mod/` and was moved to
 `%APPDATA%\SpaceEngineers\ModBackups\missil-misterplace-dev-source-20261117-224010`. Edit only in
